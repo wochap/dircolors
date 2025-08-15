@@ -1,8 +1,10 @@
 # Dracula for [dircolors](https://www.gnu.org/software/coreutils/manual/html_node/dircolors-invocation.html#dircolors-invocation)
 
+> **NOTE:** This fork replace the dracula colors with catppucci colors
+
 > A dark theme for [dircolors](https://www.gnu.org/software/coreutils/manual/html_node/dircolors-invocation.html#dircolors-invocation), a utility for setting up color configuration for GNU ls, dir, and vdir output.
 
-![Screenshot](./screenshot.png)
+![Screenshot](https://i.imgur.com/h0KE082.png)
 
 This theme follows the intent of dircolors upstream, just replacing basic ANSI colors used there with their RGB mappings specified in the Dracula theme.
 

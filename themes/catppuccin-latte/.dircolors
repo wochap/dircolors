@@ -1,0 +1,260 @@
+# Configuration file for dircolors, a utility to help you set the
+# LS_COLORS environment variable used by GNU ls with the --color option.
+
+# Copyright (C) 1996-2025 Free Software Foundation, Inc.
+# Copying and distribution of this file, with or without modification,
+# are permitted provided the copyright notice and this notice are preserved.
+
+#
+# The keywords COLOR, OPTIONS, and EIGHTBIT (honored by the
+# slackware version of dircolors) are recognized but ignored.
+
+# Global config options can be specified before TERM or COLORTERM entries
+
+# ===================================================================
+# Terminal filters
+# ===================================================================
+# Below are TERM or COLORTERM entries, which can be glob patterns, which
+# restrict following config to systems with matching environment variables.
+COLORTERM ?*
+TERM Eterm
+TERM ansi
+TERM *color*
+TERM con[0-9]*x[0-9]*
+TERM cons25
+TERM console
+TERM cygwin
+TERM *direct*
+TERM dtterm
+TERM gnome
+TERM hurd
+TERM jfbterm
+TERM konsole
+TERM kterm
+TERM linux
+TERM linux-c
+TERM mlterm
+TERM putty
+TERM rxvt*
+TERM screen*
+TERM st
+TERM terminator
+TERM tmux*
+TERM vt48;2;114;135;253
+TERM vt220
+TERM xterm*
+
+# ===================================================================
+# Basic file attributes
+# ===================================================================
+# Below are the color init strings for the basic file types.
+# One can use codes for 256 or more colors supported by modern terminals.
+# The default color codes use the capabilities of an 8 color terminal
+# with some additional attributes as per the following codes:
+# Attribute codes:
+# 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed
+# Text color codes:
+# 38;2;188;192;204=black 38;2;210;15;57=red 38;2;64;160;43=green 38;2;223;142;29=yellow 38;2;30;102;245=blue 38;2;234;118;203=magenta 38;2;23;146;153=cyan 38;2;76;79;105=white
+# Background color codes:
+# 48;2;188;192;204=black 48;2;210;15;57=red 48;2;64;160;43=green 48;2;223;142;29=yellow 48;2;30;102;245=blue 48;2;234;118;203=magenta 48;2;23;146;153=cyan 48;2;76;79;105=white
+#NORMAL 00	# no color code at all
+#FILE 00	# regular file: use no color at all
+RESET 0		# reset to "normal" color
+DIR 01;38;2;30;102;245	# directory
+LINK 01;38;2;23;146;153	# symbolic link.  (If you set this to 'target' instead of a
+                # numerical value, the color is as for the file pointed to.)
+MULTIHARDLINK 00	# regular file with more than one link
+FIFO 48;2;188;192;204;38;2;223;142;29	# pipe
+SOCK 01;38;2;234;118;203	# socket
+DOOR 01;38;2;234;118;203	# door
+BLK 48;2;188;192;204;38;2;223;142;29;01	# block device driver
+CHR 48;2;188;192;204;38;2;223;142;29;01	# character device driver
+ORPHAN 48;2;188;192;204;38;2;210;15;57;01 # symlink to nonexistent file, or non-stat'able file ...
+MISSING 00      # ... and the files they point to
+SETUID 38;2;76;79;105;48;2;210;15;57	# regular file that is setuid (u+s)
+SETGID 38;2;188;192;204;48;2;223;142;29	# regular file that is setgid (g+s)
+CAPABILITY 00	# regular file with capability (very expensive to lookup)
+STICKY_OTHER_WRITABLE 38;2;188;192;204;48;2;64;160;43 # dir that is sticky and other-writable (+t,o+w)
+OTHER_WRITABLE 38;2;30;102;245;48;2;64;160;43 # dir that is other-writable (o+w) and not sticky
+STICKY 38;2;76;79;105;48;2;30;102;245	# dir with the sticky bit set (+t) and not other-writable
+
+# This is for regular files with execute permission:
+EXEC 01;38;2;64;160;43
+
+# ===================================================================
+# File extension attributes
+# ===================================================================
+# List any file extensions like '.gz' or '.tar' that you would like ls
+# to color below. Put the suffix, a space, and the color init string.
+# (and any comments you want to add after a '#').
+# Suffixes are matched case insensitively, but if you define different
+# init strings for separate cases, those will be honored.
+#
+
+# If you use DOS-style suffixes, you may want to uncomment the following:
+#.cmd 01;38;2;64;160;43 # executables (bright green)
+#.exe 01;38;2;64;160;43
+#.com 01;38;2;64;160;43
+#.btm 01;38;2;64;160;43
+#.bat 01;38;2;64;160;43
+# Or if you want to color scripts even if they do not have the
+# executable bit actually set.
+#.sh  01;38;2;64;160;43
+#.csh 01;38;2;64;160;43
+
+# archives or compressed (bright red)
+.7z  01;38;2;210;15;57
+.ace 01;38;2;210;15;57
+.alz 01;38;2;210;15;57
+.apk 01;38;2;210;15;57
+.arc 01;38;2;210;15;57
+.arj 01;38;2;210;15;57
+.bz  01;38;2;210;15;57
+.bz2 01;38;2;210;15;57
+.cab 01;38;2;210;15;57
+.cpio 01;38;2;210;15;57
+.crate 01;38;2;210;15;57
+.deb 01;38;2;210;15;57
+.drpm 01;38;2;210;15;57
+.dwm 01;38;2;210;15;57
+.dz  01;38;2;210;15;57
+.ear 01;38;2;210;15;57
+.egg 01;38;2;210;15;57
+.esd 01;38;2;210;15;57
+.gz  01;38;2;210;15;57
+.jar 01;38;2;210;15;57
+.lha 01;38;2;210;15;57
+.lrz 01;38;2;210;15;57
+.lz  01;38;2;210;15;57
+.lz4 01;38;2;210;15;57
+.lzh 01;38;2;210;15;57
+.lzma 01;38;2;210;15;57
+.lzo 01;38;2;210;15;57
+.pyz 01;38;2;210;15;57
+.rar 01;38;2;210;15;57
+.rpm 01;38;2;210;15;57
+.rz  01;38;2;210;15;57
+.sar 01;38;2;210;15;57
+.swm 01;38;2;210;15;57
+.t7z 01;38;2;210;15;57
+.tar 01;38;2;210;15;57
+.taz 01;38;2;210;15;57
+.tbz 01;38;2;210;15;57
+.tbz2 01;38;2;210;15;57
+.tgz 01;38;2;210;15;57
+.tlz 01;38;2;210;15;57
+.txz 01;38;2;210;15;57
+.tz  01;38;2;210;15;57
+.tzo 01;38;2;210;15;57
+.tzst 01;38;2;210;15;57
+.udeb 01;38;2;210;15;57
+.war 01;38;2;210;15;57
+.whl 01;38;2;210;15;57
+.wim 01;38;2;210;15;57
+.xz  01;38;2;210;15;57
+.z   01;38;2;210;15;57
+.zip 01;38;2;210;15;57
+.zoo 01;38;2;210;15;57
+.zst 01;38;2;210;15;57
+
+# image formats
+.avif 01;38;2;234;118;203
+.jpg 01;38;2;234;118;203
+.jpeg 01;38;2;234;118;203
+.jxl 01;38;2;234;118;203
+.mjpg 01;38;2;234;118;203
+.mjpeg 01;38;2;234;118;203
+.gif 01;38;2;234;118;203
+.bmp 01;38;2;234;118;203
+.pbm 01;38;2;234;118;203
+.pgm 01;38;2;234;118;203
+.ppm 01;38;2;234;118;203
+.tga 01;38;2;234;118;203
+.xbm 01;38;2;234;118;203
+.xpm 01;38;2;234;118;203
+.tif 01;38;2;234;118;203
+.tiff 01;38;2;234;118;203
+.png 01;38;2;234;118;203
+.svg 01;38;2;234;118;203
+.svgz 01;38;2;234;118;203
+.mng 01;38;2;234;118;203
+.pcx 01;38;2;234;118;203
+.mov 01;38;2;234;118;203
+.mpg 01;38;2;234;118;203
+.mpeg 01;38;2;234;118;203
+.m2v 01;38;2;234;118;203
+.mkv 01;38;2;234;118;203
+.webm 01;38;2;234;118;203
+.webp 01;38;2;234;118;203
+.ogm 01;38;2;234;118;203
+.mp4 01;38;2;234;118;203
+.m4v 01;38;2;234;118;203
+.mp4v 01;38;2;234;118;203
+.vob 01;38;2;234;118;203
+.qt  01;38;2;234;118;203
+.nuv 01;38;2;234;118;203
+.wmv 01;38;2;234;118;203
+.asf 01;38;2;234;118;203
+.rm  01;38;2;234;118;203
+.rmvb 01;38;2;234;118;203
+.flc 01;38;2;234;118;203
+.avi 01;38;2;234;118;203
+.fli 01;38;2;234;118;203
+.flv 01;38;2;234;118;203
+.gl 01;38;2;234;118;203
+.dl 01;38;2;234;118;203
+.xcf 01;38;2;234;118;203
+.xwd 01;38;2;234;118;203
+.yuv 01;38;2;234;118;203
+.cgm 01;38;2;234;118;203
+.emf 01;38;2;234;118;203
+
+# https://wiki.xiph.org/MIME_Types_and_File_Extensions
+.ogv 01;38;2;234;118;203
+.ogx 01;38;2;234;118;203
+
+# audio formats
+.aac 00;38;2;23;146;153
+.au 00;38;2;23;146;153
+.flac 00;38;2;23;146;153
+.m4a 00;38;2;23;146;153
+.mid 00;38;2;23;146;153
+.midi 00;38;2;23;146;153
+.mka 00;38;2;23;146;153
+.mp3 00;38;2;23;146;153
+.mpc 00;38;2;23;146;153
+.ogg 00;38;2;23;146;153
+.ra 00;38;2;23;146;153
+.wav 00;38;2;23;146;153
+
+# https://wiki.xiph.org/MIME_Types_and_File_Extensions
+.oga 00;38;2;23;146;153
+.opus 00;38;2;23;146;153
+.spx 00;38;2;23;146;153
+.xspf 00;38;2;23;146;153
+
+# backup files
+*~ 00;38;2;114;135;253
+*# 00;38;2;114;135;253
+.bak 00;38;2;114;135;253
+.crdownload 00;38;2;114;135;253
+.dpkg-dist 00;38;2;114;135;253
+.dpkg-new 00;38;2;114;135;253
+.dpkg-old 00;38;2;114;135;253
+.dpkg-tmp 00;38;2;114;135;253
+.old 00;38;2;114;135;253
+.orig 00;38;2;114;135;253
+.part 00;38;2;114;135;253
+.rej 00;38;2;114;135;253
+.rpmnew 00;38;2;114;135;253
+.rpmorig 00;38;2;114;135;253
+.rpmsave 00;38;2;114;135;253
+.swp 00;38;2;114;135;253
+.tmp 00;38;2;114;135;253
+.ucf-dist 00;38;2;114;135;253
+.ucf-new 00;38;2;114;135;253
+.ucf-old 00;38;2;114;135;253
+
+#
+# Subsequent TERM or COLORTERM entries, can be used to add / override
+# config specific to those matching environment variables.
